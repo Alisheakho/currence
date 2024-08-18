@@ -1,0 +1,157 @@
+Screen_manager:
+    Login_screen:
+    Coine_screen: 
+<Login_screen>:
+    name: "login"
+    MDFloatLayout:
+        MDCard:
+            size_hint: None, None
+            size: 300, 500
+            pos_hint: {"center_x": 0.5,"center_y": 0.5}
+            elevation: 3
+            padding: 25
+            spacing: 25
+            orientation: 'vertical'
+            MDLabel:
+                text: 'WELCOME'
+                font_size: 40
+                halign: 'center'
+                # height:  self.texture_size[1]
+                padding_y: 15
+
+            MDTextField:
+                id: user
+                mode:"round"
+                text:"@gmail.com"
+                icon_right: "account"
+                size_hint_x: None
+                width: 250
+                font_size: 18
+                pos_hint: {"center_x": 0.5 }
+                # hint_text: "Email"
+                helper_text: "Example@gmail.com"
+                validator: "email"
+            MDTextField:
+                id: pswrd
+                mode:"round"
+                hint_text: "password"
+                icon_right: "eye-off"
+                size_hint_x: None
+                width: 250
+                font_size: 18
+                pos_hint: {"center_x": 0.5 }
+                password: True
+            MDFillRoundFlatButton:
+                text: "Log IN"
+                font_size: 12
+                pos_hint: {"center_x": 0.5}
+                on_press: root.login(app)
+
+#m1 m5 m15 h1 h4 h12 all
+<Coine_screen>:
+    name:"coine_sceen"
+    MDBoxLayout:
+        orientation: 'horizontal'
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_x:0.8
+            MDSegmentedControl:
+                on_active: root.on_active(*args)
+                pos_hint: {"center_x": .5, "center_y": .5}
+                MDSegmentedControlItem:
+                    text: "m1"
+                MDSegmentedControlItem:
+                    text: "m5"
+                MDSegmentedControlItem:
+                    text: "m15"
+                MDSegmentedControlItem:
+                    text: "h1"
+                MDSegmentedControlItem:
+                    text: "h4"
+                MDSegmentedControlItem:
+                    text: "h12"
+                MDSegmentedControlItem:
+                    text: "all"
+            MDBoxLayout:
+                id:chart
+                size:400,600 
+                Figure:
+        MDScrollView:
+            size_hint_x:0.2
+            MDList:
+                OneLineListItem:
+                    text: "BTC"
+                    on_release: 
+                        root.add_chart("BTC")
+                OneLineListItem:
+                    text: "ETH"
+                    on_release: 
+                        root.add_chart("ETH")
+                OneLineListItem:
+                    text: "XRP"
+                    on_release: 
+                        root.add_chart("XRP")
+                OneLineListItem:
+                    text: "LTC"
+                    on_release: 
+                        root.add_chart("LTC")
+                OneLineListItem:
+                    text: "UNI"
+                    on_release: 
+                        root.add_chart("UNI")
+                OneLineListItem:
+                    text: "EOS"
+                    on_release: 
+                        root.add_chart("EOS")
+                OneLineListItem:
+                    text: "BCH"
+                    on_release: 
+                        root.add_chart("BCH")
+                OneLineListItem:
+                    text: "BSV"
+                    on_release: 
+                        root.add_chart("BSV")
+                OneLineListItem:
+                    text: "TRX"
+                    on_release: 
+                        root.add_chart("TRX")
+                OneLineListItem:
+                    text: "LINK"
+                    on_release: 
+                        root.add_chart("LINK")
+                OneLineListItem:
+                    text: "XTZ"
+                    on_release: 
+                        root.add_chart("XTZ")
+                OneLineListItem:
+                    text: "XLM"
+                    on_release: 
+                        root.add_chart("XLM")
+                OneLineListItem:
+                    text: "ADA"
+                    on_release: 
+                        root.add_chart("ADA")
+                OneLineListItem:
+                    text: "DASH"
+                    on_release: 
+                        root.add_chart("DASH")
+                OneLineListItem:
+                    text: "ZEC"
+                    on_release: 
+                        root.add_chart("ZEC")
+                OneLineListItem:
+                    text: "BNB"
+                    on_release: 
+                        root.add_chart("BNB")
+                OneLineListItem:
+                    text: "ATOM"
+                    on_release: 
+                        root.add_chart("ATOM")
+                OneLineListItem:
+                    text: "ONT"
+                    on_release: 
+                        root.add_chart("ONT")
+                OneLineListItem:
+                    text: "VET"
+                    on_release: 
+                        root.add_chart("VET")
